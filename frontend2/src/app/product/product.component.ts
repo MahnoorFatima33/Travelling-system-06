@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-product',
   standalone: true,
@@ -19,13 +20,20 @@ export class ProductComponent implements OnInit {
   tours: any[] = [];
   newProduct: any = { name: 'abc', price: 10 };
 
-  constructor(private service: ProductserviceService,private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private elementRef: ElementRef,private service: ProductserviceService,private router: Router, private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
-    this.service.getProducts().subscribe((products: any[]) => {
+    this.service.getTours().subscribe((products: any[]) => {
     this.products =products;
     this.tours = products;
      
     });
+  }
+
+  scrollTo(sectionId: string): void {
+    const section = this.elementRef.nativeElement.querySelector(`#${sectionId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
   
 
@@ -75,14 +83,14 @@ export class ProductComponent implements OnInit {
       // Add more tours as needed
     ];
     event.preventDefault();
-    this.service.getProducts().subscribe((products: any[]) => {
+    this.service.getTours().subscribe((products: any[]) => {
       this.products = products;});
       console.log(this.products)
     if (!this.newProduct.name || !this.newProduct.price) {
       return;
     }
 
-    this.service.addProduct(this.newProduct)
+    this.service.addTour(this.newProduct)
       .subscribe(() => {
        
         this.newProduct = {
