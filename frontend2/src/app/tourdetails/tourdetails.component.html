@@ -1,1 +1,30 @@
-<p>tourdetails works!</p>
+<!-- tour-details.component.html -->
+
+
+
+
+<div *ngIf="tour">
+    <h2>{{ tour.name }}</h2>
+    <p>{{ tour.description }}</p>
+    <p>Category: {{ tour.category }}</p>
+    <p>Duration: {{ tour.duration }} days</p>
+    <p>Price: ${{ tour.price }}</p>
+    <p>Max Limit: {{ tour.maxLimit }}</p>
+    <p>Cost Price: ${{ tour.costPrice }}</p>
+  
+    <h3>Images</h3>
+    <div class="image-container">
+        <div *ngFor="let image of tour.images">
+          <img [src]="image" alt="Tour Image">
+        </div>
+      </div>
+  
+    <h3>Stops</h3>
+    <div class="stops-container">
+        <div *ngFor="let stop of tour.stops" class="stop-point">
+          <span class="connecting-line"></span>
+        </div>
+      </div>
+    <button (click)="addToCart()">Book Now</button>
+  </div>
+

@@ -1,14 +1,14 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
 .login-container {
-    height:  500px;
-    max-width: 500px;
-    width: 350px;
+    height:  600px;
+    width: 800px;
+
     margin: 0 auto;
     
     border: 2px solid #ccc;
     border-radius: 10px;
-    background-color: #f7f7f7;
+    background-color: #e4bf47;;
     margin-top: 20%;
     margin-bottom: 20%;
 
@@ -30,6 +30,7 @@
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
+    
   }
   
 
@@ -76,7 +77,7 @@
     padding-left: 50px;
     margin-left: 0%;
     border-radius: 20px;
-    border: 1px solid#b588ff;
+    border: 1px white;
     font-size: medium
     
   }
@@ -90,7 +91,7 @@
     padding-left: 50px;
    
     border-radius: 20px;
-    border: 1px solid #b588ff;
+    border: 1px solid white;
     font-size: medium
   }
   
@@ -100,7 +101,7 @@
     padding: 10px;
     border-radius: 20px;
     border: none;
-    background-color: #664df3;
+    background-color: black;;
     color: #fff;
     font-family: "Poppins",Bold;
     font-size: 16px;
@@ -110,7 +111,7 @@
   }
   
   .login-button:hover {
-    background-color:#3301b9;
+    background-color:#ecd179;;
   }
 
 

@@ -5,7 +5,7 @@
       <div class="input-container">
         <i class="fas fa-phone input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
         
-      <input type="text" id="phone"  name="phone" required placeholder="Phone">
+      <input type="text" id="phone"  name="phone"  [(ngModel)]="user.phone" required placeholder="Phone">
     </div>
     
     </div>
@@ -14,7 +14,7 @@
       <div class="input-container">
         <i class=" fas fa-envelope input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
         
-      <input type="text" id="email"  name="email" required placeholder="Username or Email">
+      <input type="text" id="email"  name="email" [(ngModel)]="user.username" required placeholder="Username or Email">
     </div>
     
     </div>
@@ -22,7 +22,7 @@
   
       <div class="input-container">
         <i class="fas fa-lock input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
-        <input type="password" id="password1" name="password1" required placeholder="Password">
+        <input type="password" id="password1" [(ngModel)]="user.password" name="password1" required placeholder="Password">
         
       </div>
 
@@ -34,7 +34,7 @@
   
       <div class="input-container">
         <i class="fas fa-lock input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
-        <input type="password" id="password2" name="password2" required placeholder="Confirm Password">
+        <input type="password" id="password2" name="password2"  [(ngModel)]="user.password" required placeholder="Confirm Password">
         
       </div>
 
@@ -45,7 +45,7 @@
   
       <div class="input-container">
         <i class="fas fa-map-marker-alt" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
-        <input type="text" id="address" name="address" required placeholder="Address">
+        <input type="text" id="address" name="address"  [(ngModel)]="user.address" required placeholder="Address">
         
       </div>
 

@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
 const tourRoutes=require('./routes/tourroutes')
+const userRoutes=require('./routes/userroutes')
+const purchaseRoutes = require('./routes/purchaseroutes');
 dbConfig = require('./utils/db');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,6 +27,8 @@ mongoose.connect(dbConfig.db, {
 // Use product routes
 app.use('/api/products', productRoutes);
 app.use('/api/tours', tourRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/purchases', userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

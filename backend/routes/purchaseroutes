@@ -1,0 +1,13 @@
+const {validateToken,requireRoles } = require('../utils/authorizationMiddleware');
+// Create a new product
+// purchaseRoutes.js
+const express = require('express');
+const purchaseController = require('../controllers/purchasecontroller');
+
+const router = express.Router();
+
+router.route('/')
+  .get(purchaseController.getAllPurchases)
+  .post(validateToken,purchaseController.createPurchase);
+
+module.exports = router;

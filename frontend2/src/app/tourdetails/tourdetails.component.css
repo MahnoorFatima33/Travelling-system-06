@@ -1,0 +1,111 @@
+/* tour-details.component.css */
+
+/* Container */
+:host {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  
+  /* Tour Details Container */
+  div {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    margin: 10px 0;
+    color: #666;
+  }
+  
+  /* Images */
+  h3 {
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  /* Stops */
+  ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  li {
+    color: #555;
+  }
+  
+  /* Book Now Button */
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+
+  /* tour-details.component.css */
+
+/* ... (previous styles) */
+
+/* Stops Container */
+.stops-container {
+    margin-top: 20px;
+  }
+  
+  /* Stop Point */
+  .stop-point {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Stop Name */
+  .stop-name {
+    display: inline-block;
+    color: #333;
+  }
+  
+  /* Connecting Curves */
+  .connecting-line {
+    position: absolute;
+    height: 2px;
+    background-color: #3498db;
+    top: 50%;
+    left: calc(50% + 10px); /* Adjust as needed based on your design */
+    transform-origin: left center;
+  }
+  .image-container {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+ 
+  /* ... (previous styles) */
