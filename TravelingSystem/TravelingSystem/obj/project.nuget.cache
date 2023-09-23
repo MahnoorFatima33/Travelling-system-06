@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oKBAjeaU+2QMw85yO2rHQlmFT+RR3KT6OWBs4XNsSfk7dpHKALqIOInNRbJAl4l6K0+pQhJzO6qhETiufR0guA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dell\\Documents\\GitHub\\Travelling-system-06\\TravelingSystem\\TravelingSystem\\TravelingSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+  ],
+  "logs": []
+}
