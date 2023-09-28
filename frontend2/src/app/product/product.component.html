@@ -1,0 +1,98 @@
+<div class="product-container"> 
+    
+  <!-- <header>
+    <h1>Jadoo</h1>
+    <nav>
+      <a href="#">Categories</a>
+      <a href="#">Destinations</a>
+      <a href="#">Login</a>
+      <a href="#">Sign up</a>
+      <a href="#">EN</a>
+    </nav>
+  </header> -->
+  <!-- <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://i.postimg.cc/mg4rWBmv/logo.png" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>
+We are <span>Creative</span></h1>
+<a href="#">Contact US</a>
+    </div>
+</header> -->
+<header class="header">
+    <nav class="navbar">
+      
+       <img class='logo' src="assets/logo.png">
+      
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="#" class="signin">Sign In</a>
+        <a href="#" class="signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+ 
+    <div class="hero">
+      <h2>Travel, enjoy<br>
+        and live a new<br>
+        and full life</h2>
+      <p>
+        Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
+      </p>
+      <div class="buttons">
+        <a href="#" class="join">Find Tours </a>
+      
+      </div>
+    </div>
+    <br>
+    <div class="img">
+      <img src="assets/girl.png" alt="hero image" />
+    </div>
+  </section>
+    <h2>Products</h2> // Display product heading
+
+    <form (submit)="addProduct($event)"> // Create product form
+      <label for="productName">Product Name:</label> // Label for product name input
+      <input type="text" id="productName" name="productName" [(ngModel)]="newProduct.name"> // Input field for product name, binding to newProduct.name
+      <br>
+  
+      <label for="productPrice">Product Price:</label> // Label for product price input
+      <input type="number" id="productPrice" name="productPrice" [(ngModel)]="newProduct.price"> // Input field for product price, binding to newProduct.price
+      <br>
+  
+      <button type="submit">Add Product</button> // Submit button to trigger addProduct method
+    </form>
+      <div>
+    <h2>Products</h2>
+    <div *ngFor="let product of products">
+      <!-- Display product details here -->
+      <p>{{ product.name }}</p>
+      <p>{{ product.price }}</p>
+      <!-- Add more product details as needed -->
+    </div>
+  </div>
+  </div>

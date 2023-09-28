@@ -1,0 +1,24 @@
+const Product = require('../models/product');
+
+// Controller to handle product-related operations
+
+exports.getProducts = async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+exports.addProduct = async (req, res) => {
+  const { name, price } = req.body;
+
+  try {
+    const newProduct = new Product({ name, price });
+    const savedProduct = await newProduct.save();
+    res.json(savedProduct);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
