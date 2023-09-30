@@ -2,7 +2,7 @@
     <h2>Products</h2> // Display product heading
   
 
-    <!-- <form (submit)="addProduct($event)"> // Create product form
+    <form (submit)="addProduct($event)"> // Create product form
       <label for="productName">Product Name:</label> // Label for product name input
       <input type="text" id="productName" name="productName" [(ngModel)]="newProduct.name"> // Input field for product name, binding to newProduct.name
       <br>
@@ -12,5 +12,14 @@
       <br>
   
       <button type="submit">Add Product</button> // Submit button to trigger addProduct method
-    </form> -->
+    </form>
+    <div>
+        <h2>Products</h2>
+        <div *ngFor="let product of products">
+          <!-- Display product details here -->
+          <p>{{ product.name }}</p>
+          <p>{{ product.price }}</p>
+          <!-- Add more product details as needed -->
+        </div>
+      </div>
   </div>

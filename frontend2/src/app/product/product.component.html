@@ -61,7 +61,7 @@ We are <span>Creative</span></h1>
         and live a new<br>
         and full life</h2>
       <p>
-        Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
+        Wander far, wander often. Join us on extraordinary journeys, crafting memories that last a lifetime. Let's explore together!
       </p>
       <div class="buttons">
         <a href="#" class="join">Find Tours </a>
@@ -93,6 +93,20 @@ We are <span>Creative</span></h1>
       <p>{{ product.name }}</p>
       <p>{{ product.price }}</p>
       <!-- Add more product details as needed -->
+    </div>
+
+    <div class="container">
+      <div class="tour-container">
+        <div class="tour-card" *ngFor="let tour of tours">
+          <img class="tour-image" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" alt="{{ tour.name }}">
+          <div class="tour-details">
+            <div class="tour-name">{{ tour.name }}</div>
+            <div class="tour-price">${{ tour.price }}</div>
+            <div class="tour-duration">{{ tour.duration }}</div>
+            <a routerLink="/details/{{tour.id}}" class="btn btn-primary product-details-button">View Details</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </div>
