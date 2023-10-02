@@ -1,0 +1,116 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.login-container {
+    height:  500px;
+    max-width: 500px;
+    width: 350px;
+    margin: 0 auto;
+    
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    margin-top: 20%;
+    margin-bottom: 20%;
+
+
+    /* Center the component using flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  }
+
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container i {
+    position: relative;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  
+
+  .centered-link {
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+    font-size: small;
+    margin-top: 15%;
+    margin-bottom: 0%;
+  }
+  .link-no-margin {
+    margin: 0;
+  }
+  h2 {
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 7%;
+   
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-family: "Poppins";
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"]
+  {
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    margin-left: 0%;
+    border-radius: 20px;
+    border: 1px solid#b588ff;
+    font-size: medium
+    
+  }
+
+  input[type="password"] {
+    width: 100%;
+    
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+   
+    border-radius: 20px;
+    border: 1px solid #b588ff;
+    font-size: medium
+  }
+  
+  .login-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #664df3;
+    color: #fff;
+    font-family: "Poppins",Bold;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color:#3301b9;
+  }
+
+
+  
