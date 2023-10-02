@@ -1,0 +1,52 @@
+<div class="login-container">
+    <h2>Sign Up</h2>
+    <form (ngSubmit)="SignUp()">
+      <div class="form-group">
+        <div class="input-container">
+          <i class="fas fa-phone input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
+          
+        <input type="text" id="phone"  name="phone" required placeholder="Phone">
+      </div>
+      
+      </div>
+   
+      <div class="form-group">
+        <div class="input-container">
+          <i class=" fas fa-envelope input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
+          
+        <input type="text" id="email"  name="email" required placeholder="Username or Email">
+      </div>
+      
+      </div>
+      <div class="form-group">
+    
+        <div class="input-container">
+          <i class="fas fa-lock input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
+          <input type="password" id="password1" name="password1" required placeholder="Password">
+          
+        </div>
+
+       
+      </div>
+
+
+      <div class="form-group">
+    
+        <div class="input-container">
+          <i class="fas fa-lock input-icon" [ngClass]="{'active': isPasswordVisible}" (click)="togglePasswordVisibility()"></i>
+          <input type="password" id="password2" name="password2" required placeholder="Confirm Password">
+          
+        </div>
+
+       
+      </div>
+      <button type="submit" class="login-button" (click)="SignUp()">Sign Up</button>
+      <div class="centered-link">
+      <p>Already have an account?</p>
+     
+      <a href="Login" class="link-no-margin"   >Login here</a>
+    </div>
+    </form>
+   
+  </div>
+  
