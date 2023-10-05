@@ -1,0 +1,67 @@
+<header class="header">
+  <nav class="navbar">
+    <img class='logo' src="assets/logo.png" alt="Your Logo">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" id="hamburger-btn">
+      <!-- Your hamburger icon SVG code -->
+    </label>
+    <ul class="links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <div class="buttons">
+      <a href="#" class="signin">Sign In</a>
+      <a routerLink="/signup" class="signup">Sign Up</a>
+    </div>
+  </nav>
+</header>
+
+
+<form class="tour-form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Tour Name:</label>
+      <input type="text" id="name" [(ngModel)]="tour.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="tour.description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select id="category" [(ngModel)]="tour.category" name="category" required>
+        <option value="foreign">Foreign</option>
+        <option value="local">Local</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration (days):</label>
+      <input type="number" id="duration" [(ngModel)]="tour.duration" name="duration" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" [(ngModel)]="tour.price" name="price" required>
+    </div>
+    <div class="form-group">
+      <label for="maxLimit">Max Limit:</label>
+      <input type="number" id="maxLimit" [(ngModel)]="tour.maxLimit" name="maxLimit" required>
+    </div>
+    <div class="form-group">
+      <label for="costPrice">Cost Price:</label>
+      <input type="number" id="costPrice" [(ngModel)]="tour.costPrice" name="costPrice" required>
+    </div>
+    <div class="form-group">
+      <label for="stops">Stops:</label>
+      <textarea id="stops" [(ngModel)]="tour.stops" name="stops" placeholder="Enter stops separated by commas"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="imageUrls">Image URLs:</label>
+        <textarea id="imageUrls" [(ngModel)]="tour.imageUrls" name="imageUrls" placeholder="Enter image URLs separated by commas"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  

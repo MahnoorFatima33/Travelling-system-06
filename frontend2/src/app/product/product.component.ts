@@ -23,6 +23,13 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.service.getProducts().subscribe((products: any[]) => {
     this.products =products;
+    this.tours = products;
+     
+    });
+  }
+  
+
+  addProduct(event: Event): void {
     this.tours = [
       {
         id: 1,
@@ -67,13 +74,6 @@ export class ProductComponent implements OnInit {
       },
       // Add more tours as needed
     ];
-
-     
-    });
-  }
-  
-
-  addProduct(event: Event): void {
     event.preventDefault();
     this.service.getProducts().subscribe((products: any[]) => {
       this.products = products;});
