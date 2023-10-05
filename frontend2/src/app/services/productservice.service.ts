@@ -5,16 +5,24 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductserviceService {
-  private apiUrl = 'http://localhost:3000/api/products';
+  private apiUrl = 'http://localhost:3000/api/tours';
 
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+  
 
   addProduct(product: any): Observable<any> {
     return this.http.post<any>(this.apiUrl, product);
+  }
+
+  addTour(tourData: any): Observable<any> {
+ 
+
+    return this.http.post<any>(this.apiUrl, tourData);
+     
   }
 
 }

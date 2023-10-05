@@ -30,13 +30,30 @@ exports.getTourById = async (req, res) => {
 
 // Create a new tour
 exports.createTour = async (req, res) => {
-  const { name, description, duration, price, images } = req.body;
+  const { name, description, category, duration, price, images, maxLimit, costPrice, stops } = req.body;
 
+  // Validate the category field
+  if (!['foreign', 'local'].includes(category)) {
+    return res.status(400).json({ error: 'Invalid category' });
+  }
+
+  // Validate the maxLimit field
+  if (!isFinite(maxLimit) || maxLimit < 1) {
+    return res.status(400).json({ error: 'Invalid maxLimit' });
+  }
+
+  // Validate the costPrice field
+  if (!isFinite(costPrice) || costPrice < 0) {
+    return res.status(400).json({ error: 'Invalid costPrice' });
+  }
+ 
   try {
-    const newTour = await Tour.create({ name, description, duration, price, images });
-    res.status(201).json(newTour);
+    const newTour= new Tour({ name, description, category, duration, price, images, maxLimit, costPrice, stops });
+    const tour = await newTour.save();
+    res.status(201).json(tour);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    m=error.message
+    res.status(500).json({ m });
   }
 };
 

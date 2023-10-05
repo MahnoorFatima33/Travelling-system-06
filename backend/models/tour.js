@@ -1,21 +1,16 @@
-// const stopSchema = new mongoose.Schema({
-//     location: String,
-//   });
+const mongoose = require('mongoose');
   
   const tourSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    description: String,
-   // category: { type: String, enum: ['foreign', 'local'], required: true },
+    description: {type:String,required:true},
+    category: { type: String, enum: ['foreign', 'local'], required: true },
     duration: { type: Number, required: true },
     price: { type: Number, required: true },
     images: [String],
-    // stops: [stopSchema],
-    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Admin' },
-    // reviews: [
-    //   {
-    //     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    //     rating: { type: Number, required: true },
-    //     createdAt: { type: Date, default: Date.now },
-    //   },
-    // ],
+    maxLimit: { type: Number, required: true },
+    costPrice: { type: Number, required: true },
+    stops: [String]
+ 
   });
+
+  module.exports = mongoose.model('Tour', tourSchema);
