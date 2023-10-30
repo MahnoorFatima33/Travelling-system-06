@@ -1,111 +1,110 @@
-/* tour-details.component.css */
+/* Add this CSS to your styles.css or a dedicated stylesheet */
 
-/* Container */
-:host {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-  }
-  
-  /* Tour Details Container */
-  div {
-    width: 80%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  p {
-    margin: 10px 0;
-    color: #666;
-  }
-  
-  /* Images */
-  h3 {
-    margin-top: 20px;
-    color: #333;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-  }
-  
-  /* Stops */
-  ul {
-    padding: 0;
-    list-style: none;
-    margin-top: 10px;
-  }
-  
-  li {
-    color: #555;
-  }
-  
-  /* Book Now Button */
-  button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+/* Add this CSS to your styles.css or a dedicated stylesheet */
 
-  /* tour-details.component.css */
+.tour-details-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-/* ... (previous styles) */
+/* ... (existing styles) ... */
 
-/* Stops Container */
+.mat-tab-label {
+  background-color: #d0db34;
+  color: #fff;
+}
+
+.mat-tab-body-content {
+  padding: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.image-container div {
+  width: 100%;
+  max-width: 200px; /* Adjust this property as needed */
+  margin: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.image-container div.active {
+  transform: scale(1.2);
+  margin: 0 auto; /* Add this line to center the image horizontally */
+}
+
+.image-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.tour-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.book-button {
+  object-fit: cover;
+  width: 100%;
+}
+button:hover {
+  background-color: rgb(185, 170, 41);
+}
+
+i {
+  font-size: 18px;
+}
+
+/* Styling for Stops tab */
 .stops-container {
-    margin-top: 20px;
-  }
-  
-  /* Stop Point */
-  .stop-point {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: #3498db;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  /* Stop Name */
-  .stop-name {
-    display: inline-block;
-    color: #333;
-  }
-  
-  /* Connecting Curves */
-  .connecting-line {
-    position: absolute;
-    height: 2px;
-    background-color: #3498db;
-    top: 50%;
-    left: calc(50% + 10px); /* Adjust as needed based on your design */
-    transform-origin: left center;
-  }
-  .image-container {
-    display: flex;
-    overflow-x: auto;
-  }
-  
- 
-  /* ... (previous styles) */
+  display: flex;
+  align-items: center;
+}
+
+.stop-point {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #3498db;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.stop-point {
+  display: flex;
+  align-items: center;
+  margin: 10px 0; /* Adjust margin as needed */
+}
+
+.stop-point p {
+  margin: 0 10px; /* Adjust margin as needed */
+  color: #333;
+}
+

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductserviceService } from '../services/productservice.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {Router} from  '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -13,7 +14,7 @@ export class LoginComponent {
   
    
    
-    constructor(private tourService:ProductserviceService){}
+    constructor(private router : Router,private tourService:ProductserviceService){}
     user: any = {
       username: '',
       password: '',
@@ -25,6 +26,10 @@ export class LoginComponent {
       // Assuming TourService has a method named addTour to post the tour data
       this.tourService.login(this.user.username,this.user.password).subscribe(
         (response) => {
+          if (response.user.role=='user')
+          {
+            this.router.navigate(['/login']);
+          }
           // Handle successful response
           console.log('Login Successfully:', response);
           // Reset the form

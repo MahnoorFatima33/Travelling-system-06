@@ -91,6 +91,26 @@
   
 
 
+<!-- 
+  <div class="review-section">
+    <h2>Customer Reviews</h2>
+    <mat-card *ngFor="let review of reviews; let i = index" class="review-card">
+      <mat-card-header>
+        <mat-card-title>{{ review.name }}</mat-card-title>
+        <mat-card-subtitle>{{ review.date }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ review.reviewDescription }}</p>
+        <button mat-raised-button (click)="toggleReview(i)">
+          {{ review.isExpanded ? 'Hide Details' : 'View Details' }}
+        </button>
+      </mat-card-content>
+      <div *ngIf="review.isExpanded" class="review-details">
+        <p>More information about the review...</p>
+      </div>
+    </mat-card>
+  </div>
+ -->
 
 
 
