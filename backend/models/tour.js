@@ -9,7 +9,8 @@ const mongoose = require('mongoose');
     images: [String],
     maxLimit: { type: Number, required: true },
     costPrice: { type: Number, required: true },
-    stops: [String]
+    stops: [String],
+    date:{type:Date,required:true}
  
   });
 

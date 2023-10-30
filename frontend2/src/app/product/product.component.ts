@@ -8,14 +8,34 @@ import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ElementRef } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog'
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [FormsModule,CommonModule,RouterLink],
+  imports: [FormsModule,CommonModule,RouterLink,MatButtonModule,MatCardModule,MatDialogModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
 export class ProductComponent implements OnInit {
+  reviews: any[] = [
+    {
+      name: 'John Doe',
+      date: '2023-12-09',
+      reviewDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+    },
+    {
+      name: 'Jane Doe',
+      date: '2023-12-08',
+      reviewDescription: 'Sed a ligula euismod, rutrum quam sed, laoreet ipsum...',
+    },
+    {
+      name: 'Mike Smith',
+      date: '2023-12-07',
+      reviewDescription: 'Donec vitae nibh finibus, placerat risus vel, facilisis diam...',
+    },
+  ];
   products: any[] = [];
   tours: any[] = [];
   newProduct: any = { name: 'abc', price: 10 };
@@ -98,6 +118,9 @@ export class ProductComponent implements OnInit {
           price: 0
         };
       });
+  }
+  toggleReview(index: number): void {
+    this.reviews[index].isExpanded = !this.reviews[index].isExpanded;
   }
 
 }

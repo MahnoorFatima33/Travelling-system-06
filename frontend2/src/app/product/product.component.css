@@ -32,11 +32,15 @@ body {
   padding: 20px 15px;
   width: 100%;
 }
+.logo{
+  margin: 2px;
+}
 
 .navbar .logo a {
   font-size: 1.8rem;
   text-decoration: none;
   color: #0f0f0f;
+  margin: 2px;
 }
 
 .navbar .links {
@@ -369,4 +373,17 @@ button {
 
 button:hover {
   background-color: #3498db;
+}
+.review-card {
+  margin: 10px;
+}
+
+.review-details {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.review-card.expanded .review-details {
+  display: block;
 }

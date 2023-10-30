@@ -30,7 +30,7 @@ exports.getTourById = async (req, res) => {
 
 // Create a new tour
 exports.createTour = async (req, res) => {
-  const { name, description, category, duration, price, images, maxLimit, costPrice, stops } = req.body;
+  const { name, description, category, duration, price, images, maxLimit, costPrice, stops ,date} = req.body;
 
   // Validate the category field
   if (!['foreign', 'local'].includes(category)) {
@@ -48,7 +48,7 @@ exports.createTour = async (req, res) => {
   }
  
   try {
-    const newTour= new Tour({ name, description, category, duration, price, images, maxLimit, costPrice, stops });
+    const newTour= new Tour({ name, description, category, duration, price, images, maxLimit, costPrice, stops ,date});
     const tour = await newTour.save();
     res.status(201).json(tour);
   } catch (error) {
@@ -63,7 +63,7 @@ exports.updateTour = async (req, res) => {
   const { name, description, duration, price, images } = req.body;
 
   try {
-    const updatedTour = await Tour.findByIdAndUpdate(tourId, { name, description, duration, price, images }, { new: true });
+    const updatedTour = await Tour.findByIdAndUpdate(tourId, { name, description, category, duration, price, images, maxLimit, costPrice, stops ,date}, { new: true });
     if (!updatedTour) {
       return res.status(404).json({ error: 'Tour not found' });
     }
