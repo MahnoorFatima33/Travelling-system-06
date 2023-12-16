@@ -24,11 +24,14 @@ export class LoginComponent {
     SignUp() {
   console.log(this.user)
       // Assuming TourService has a method named addTour to post the tour data
+      
       this.tourService.login(this.user.username,this.user.password).subscribe(
         (response) => {
-          if (response.user.role=='user')
+          console.log(response.User.role);
+          if (response.User.role=='user')
           {
-            this.router.navigate(['/login']);
+            
+            this.router.navigate(['/Product2']);
           }
           // Handle successful response
           console.log('Login Successfully:', response);
